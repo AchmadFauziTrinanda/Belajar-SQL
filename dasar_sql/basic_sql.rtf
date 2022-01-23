@@ -1,0 +1,49 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #Create Schema\
+create schema if not exists schema_name;\
+\
+#Create Table\
+create table if not exists table_name (\
+column1 datatype(length) column_constraint,\
+column2 datatype(length) column_constraint,\
+column2 datatype(length) column_constraint,\
+table_constraints\
+ \'97- PRIMARY KEY (column1)\
+ \'97- FOREIGN KEY (column2)\
+		REFERENCES table_name(column_name)\
+);\
+\
+#Insert Into Table\
+insert into table_name values (data1, data2,\'85\'85)\
+\
+#Update\
+update table_name\
+set column1 = data1, column2 = data2,\'85\'85)\
+where condition\
+\
+#Select (Open All Column)\
+select * from table_name;\
+\
+#Select (Specific Column)\
+select column1, column2, \'85\'85 from table_name;\
+\
+#Alter Table (Add or Delete column)\
+#Add Column\
+alter table table_name add column1 datatype (length); \
+#Delete Column\
+alter table table_name drop COLUMN column1; \
+\
+#Delete Function (to delete specific row with specific condition\
+delete from table_name where condition; \
+\
+#TRUNCATE (Delete all rows in table without condition)\
+truncate table table_name;\
+\
+#DROP (Delete the table without condition)\
+drop table table_name;}
